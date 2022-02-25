@@ -1,0 +1,24 @@
+.dog01{
+border-width: medium;
+border-color: red;
+border-style: solid;
+width: 320px;
+padding: 5px;
+}
+
+.dog02{
+  border-width: medium;
+  border-color: green;
+  border-style: solid;
+  width: 300px;
+  padding: 5px;
+  }
+
+  .dog03{
+    border-width: medium;
+    border-color: blue;
+    border-style: solid;
+    width: 300px;
+    padding: 5px;
+    }
+
