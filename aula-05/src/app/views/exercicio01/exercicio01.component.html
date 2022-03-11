@@ -1,0 +1,15 @@
+<h3>Exercicio de ngIf 01</h3>
+Digite um numero<input  type="number" [(ngModel)] = "numero" placeholder="Numero" >
+
+
+<div *ngIf="numero>0">
+   <p> O numero {{numero}} é positivo</p>
+</div>
+
+<div *ngIf="numero<0">
+    <p>O numero {{numero}} é negativo</p>
+</div>
+
+<div *ngIf="numero==0">
+   <p>O numero {{numero}} está zerado</p>
+</div>

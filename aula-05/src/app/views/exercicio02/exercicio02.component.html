@@ -1,0 +1,16 @@
+<hr>
+<h3>Exercicio 02</h3>
+
+
+Digite o primeiro valor <input  type="number" [(ngModel)] = "valor01" placeholder="Primeiro Valor" >
+Digite o primeiro valor <input  type="number" [(ngModel)] = "valor02" placeholder="Segundo Valor" >
+
+
+Escolha a Operação:
+
+<button  (click)="calcular('+')">+</button>
+<button  (click)="calcular('-')">-</button>
+<button  (click)="calcular('*')">*</button>
+<button  (click)="calcular('/')">/</button>
+
+<p>Resultado: {{result}}</p>

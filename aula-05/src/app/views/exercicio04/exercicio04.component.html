@@ -1,0 +1,15 @@
+<hr>
+<h3>Exercicio 04</h3>
+<p>Crie um Array contendo 4 paises do mundo. Mostre o array em formato
+  de lista na página.Quando um país for clicado, mostre um alert contendo seu nome.
+</p>
+
+
+<ul>
+  clique para alertar
+  <li *ngFor="let pais of vetorPaises"(click)="mostrarNome(pais)">
+  <button>{{pais}}</button>
+    <img src="../assets/{{pais}}.png" style="width: 200px;">
+
+  </li>
+</ul>

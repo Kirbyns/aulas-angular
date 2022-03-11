@@ -1,0 +1,7 @@
+para usar o bind de duas vias (ngIF) é necessario sempre adicionar o modulo 
+dentro do import no appmodule colocar :
+
+AppRoutingModule, FormsModule
+
+
+sempre alterar a APP.component.html

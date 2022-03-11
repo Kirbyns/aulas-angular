@@ -1,0 +1,11 @@
+<h1>exemplo ngIf!</h1>
+<input [(ngModel)] = "nome" placeholder="Nome" >
+
+<input [(ngModel)] = "sobrenome" placeholder="Sobrenome">
+
+
+
+<div *ngIf="nome && sobrenome">
+   Nome Informado: {{nome}}
+  Sobrenome: {{sobrenome}}
+</div>
