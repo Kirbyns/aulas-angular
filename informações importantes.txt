@@ -1,0 +1,17 @@
+na app.module.ts
+
+
+colocar:
+
+import {FormsModule} from '@angular/forms';
+
+abaixo de imports:[
+colocar tb
+
+FormsModule
+
+
+
+Isso permite que o NGmodule usar bind de duas vias. 
+
+todo novo projeto deve ser colocado isso.
