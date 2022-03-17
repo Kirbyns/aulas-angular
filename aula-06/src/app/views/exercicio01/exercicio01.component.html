@@ -1,0 +1,17 @@
+<hr>
+ <h3>Exercicio 01</h3>
+  <input type="text" [(ngModel)]="canal">
+ <div [ngSwitch]="canal">
+
+    <div *ngSwitchCase="'Jovem Nerd'">
+       <h4>Jovem Nerd</h4>
+    </div>
+    <div *ngSwitchCase="'alanzoka'">
+      <h4>Alanzoka</h4>
+      <div *ngSwitchDefault=""></div>
+   </div>
+   <div *ngSwitchCase="'Flow Podcast'">
+    <h4>Flow Podcast</h4>
+ </div>
+
+ </div>

@@ -1,0 +1,10 @@
+<p>ngswitch works!</p>
+<h3>Exemplo de SwitchCase</h3>
+<input type="text" [(ngModel)]="dog">
+<div [ngSwitch]="dog">
+<img *ngSwitchCase="'dog01'"  src="assets/dog01.jpg">
+<img *ngSwitchCase="'dog02'" src="assets/dog02.png">
+<img *ngSwitchCase="'dog03'" src="assets/dog02.jpg">
+
+
+</div>

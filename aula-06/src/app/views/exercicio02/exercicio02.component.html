@@ -1,0 +1,27 @@
+<hr>
+
+<h3>Exercicio 02</h3>
+
+<!--esse codigo mostra os exercicios passados, o certo seria ter feito na app.component que seria a principal-->
+<!--porem fiz no propio exercicio para não perder o pensamento quando for estudar-->
+<button (click)="setValue1()">Exercicio 01</button>
+<button (click)="setValue2()">Exercicio 02</button>
+<button (click)="setValue3()">Exercicio 01 e 02</button>
+
+ <div [ngSwitch]="teste">
+
+    <div *ngSwitchCase="'exercicio01'">
+       <app-exercicio01></app-exercicio01>
+    </div>
+    <div *ngSwitchCase="'exercicio02'">
+      <app-exercicio02></app-exercicio02>
+      <div *ngSwitchDefault=""></div>
+   </div>
+   <div *ngSwitchCase="'osdois'">
+    <app-exercicio01></app-exercicio01>
+
+    <app-exercicio02></app-exercicio02>
+    <div *ngSwitchDefault></div>
+ </div>
+
+ </div>
