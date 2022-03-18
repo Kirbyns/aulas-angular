@@ -1,0 +1,19 @@
+<hr>
+
+<h3>Exercicio - 02</h3>
+<p>2. Crie um componente Angular capaz de exibir uma imagem dentre 4 possíveis, de acordo com o clique
+  em 4 botões diferentes (cada botão deve exibir uma imagem e esconder as demais).</p>
+
+
+  <button (click)="imagem = 'imagem01'">imagem01</button>
+  <button (click)="imagem = 'imagem02'">imagem01</button>
+  <button (click)="imagem = 'imagem03'">imagem01</button>
+
+  <div [ngSwitch]="imagem">
+    <br>
+    <img *ngSwitchCase="'imagem01'" src="/assets/imagem01.png">
+    <img *ngSwitchCase="'imagem02'" src="">
+    <img *ngSwitchCase="'imagem03'" src="">
+
+
+  </div>
