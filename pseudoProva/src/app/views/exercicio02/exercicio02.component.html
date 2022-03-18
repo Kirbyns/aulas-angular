@@ -12,8 +12,11 @@
   <div [ngSwitch]="imagem">
     <br>
     <img *ngSwitchCase="'imagem01'" src="/assets/imagem01.png">
-    <img *ngSwitchCase="'imagem02'" src="">
-    <img *ngSwitchCase="'imagem03'" src="">
+    <img *ngSwitchCase="'imagem02'" src="/assets/imagem02.png">
+    <img *ngSwitchCase="'imagem03'" src="/assets/imagem03.png">
+    <br>
+    <div *ngSwitchDefault> <p>sem imagem por enquanto</p></div>
+    <button (click)="imagem = ''">tirar imagem</button>
 
 
   </div>

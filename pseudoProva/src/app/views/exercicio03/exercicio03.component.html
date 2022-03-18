@@ -1,0 +1,13 @@
+<hr>
+
+<h3>Exercicio - 03</h3>
+ <p>3. Crie três botões que, quando clicados, são capazes de mudar a cor da borda de uma div para vermelho,
+  verde e azul. Ao clicar dentro de uma das divs, as cores das bordas de todas as divs devem ficar pretas.</p>
+
+
+  <button (click)="cor = 'blue'"> Azul</button>
+  <button (click)="cor = 'red'"> Vermelho</button>
+  <button (click)="cor = 'green'"> Verde</button>
+  <br>
+
+  <div (click)="cor = 'black'" class ="{{cor}}"></div>
