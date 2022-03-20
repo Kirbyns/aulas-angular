@@ -5,9 +5,10 @@
   verde e azul. Ao clicar dentro de uma das divs, as cores das bordas de todas as divs devem ficar pretas.</p>
 
 
-  <button (click)="cor = 'blue'"> Azul</button>
-  <button (click)="cor = 'red'"> Vermelho</button>
-  <button (click)="cor = 'green'"> Verde</button>
+  <button type="button" class="btn btn-primary m-1" (click)="cor = 'blue'"> Azul</button>
+  <button type="button" class="btn btn-danger  m-1" (click)="cor = 'red'"> Vermelho</button>
+  <button type="button" class="btn btn-success m-1" (click)="cor = 'green'"> Verde</button>
+
   <br>
 
   <div (click)="cor = 'black'" class ="{{cor}}"></div>

@@ -5,9 +5,9 @@
   em 4 botões diferentes (cada botão deve exibir uma imagem e esconder as demais).</p>
 
 
-  <button class="btn btn-primary" (click)="imagem = 'imagem01'">imagem 01</button>
-  <button (click)="imagem = 'imagem02'">imagem 02</button>
-  <button (click)="imagem = 'imagem03'">imagem 03</button>
+  <button class="btn btn-dark m-1" (click)="imagem = 'imagem01'">imagem 01</button>
+  <button class="btn btn-danger m-1" (click)="imagem = 'imagem02'">imagem 02</button>
+  <button class="btn btn-primary m-1" (click)="imagem = 'imagem03'">imagem 03</button>
 
   <div [ngSwitch]="imagem">
     <br>
@@ -16,7 +16,7 @@
     <img *ngSwitchCase="'imagem03'" src="/assets/imagem03.png">
     <br>
     <div *ngSwitchDefault> <p>sem imagem por enquanto</p></div>
-    <button (click)="imagem = ''">tirar imagem</button>
+    <button class="btn btn-light" (click)="imagem = ''">tirar imagem</button>
 
 
   </div>

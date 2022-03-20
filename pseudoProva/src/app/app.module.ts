@@ -7,6 +7,7 @@ import {FormsModule} from '@angular/forms';
 import { Exercicio02Component } from './views/exercicio02/exercicio02.component';
 import { Exercicio03Component } from './views/exercicio03/exercicio03.component';
 import { Exercicio04Component } from './views/exercicio04/exercicio04.component';
+import { Exercicio05Component } from './views/exercicio05/exercicio05.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { Exercicio04Component } from './views/exercicio04/exercicio04.component'
     Exercicio01Component,
     Exercicio02Component,
     Exercicio03Component,
-    Exercicio04Component
+    Exercicio04Component,
+    Exercicio05Component
   ],
   imports: [
     BrowserModule,

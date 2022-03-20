@@ -2,9 +2,14 @@
 <p>1. Elabore um componente Angular capaz de ler nome e sobrenome em campos separados e exibir o
   nome completo num elemento de texto abaixo dos campos enquanto os valores são digitados nas
   caixas. O nome completo deve aparecer todo em letras minúsculas.</p>
-<div>
-  Digite o nome: <input [(ngModel)]="nome" type="text">
+<div class="container">
+ <input  placeholder="Digite o nome" [(ngModel)]="nome" type="text">
   <br>
-  Digite o sobrenome: <input [(ngModel)]="sobrenome" type="text">
+ <input placeholder="Digite o sobrenome"[(ngModel)]="sobrenome" type="text">
 </div>
-<p>Seu nome é {{nome}} {{sobrenome}}</p>
+<div>
+
+  <p>Seu nome é  <span class="text-primary bg-dark">{{nome}} </span> <span class="text-warning bg-dark">{{sobrenome}}</span>
+  </p>
+</div>
+
