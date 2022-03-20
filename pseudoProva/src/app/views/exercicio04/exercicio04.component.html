@@ -1,1 +1,19 @@
-<p>exercicio04 works!</p>
+<hr>
+<h3>Exercicio - 04</h3>
+<p>Crie um componente com três imagens que, ao clicadas, devem alternar o item clicado para uma
+  imagem diferente. Se clicadas novamente, o item original deve ser reexibido.</p>
+
+
+
+
+  <div [ngSwitch]="imagem">
+    <br>
+    <img (click)="mudar()" *ngSwitchCase="'imagem01'" src="/assets/imagem01.png">
+    <img (click)="mudar()"*ngSwitchCase="'imagem02'" src="/assets/imagem02.png">
+    <img (click)="mudar()"*ngSwitchCase="'imagem03'" src="/assets/imagem03.png">
+    <br>
+    <div *ngSwitchDefault> <p>sem imagem por enquanto</p></div>
+
+  </div>
+
+
