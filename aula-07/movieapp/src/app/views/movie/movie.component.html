@@ -4,8 +4,9 @@
 
 
   <ul class="list-group">
-    <li  class="list-group-item"*ngFor="let movie of movies" (click)="selectMovie(movie)">
+    <li  class="list-group-item"*ngFor="let movie of movies;let contador = index" (click)="selectMovie(movie)">
       {{movie.name}} - {{movie.rating}}
+      <button class="btn btn-danger  float-right" (click)="remove(contador)">REMOVER</button>
     </li>
 
   </ul>
@@ -16,10 +17,12 @@
     <input  class="form-control col" type="text" placeholder="Name" [(ngModel)]="curMovie.name">
     <input class="form-control col" type="number" placeholder ="Rating" [(ngModel)]="curMovie.rating">
     <button class="btn btn-outline-success" (click)="save()">salvar</button>
+    <button class="btn btn-outline-danger" (click)="cancelar()">Cancelar</button>
   </div>
   <br>
-  <div class=" container col-1 btn-group">
-    <button class="btn btn-primary" (click)="newMovie()">New</button>
+  <div class=" container col-3 btn-group">
+    <button class="btn btn-primary" (click)="newMovie()">Novo filme</button>
+
 
   </div>
 </div>

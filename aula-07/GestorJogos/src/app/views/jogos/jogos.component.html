@@ -1,0 +1,39 @@
+
+<div class="container">
+  <h3>Listagem de filmes</h3>
+
+
+
+  <ul class="list-group">
+    <li  class="list-group-item"*ngFor="let jogo of jogos;let contador = index" (click)="selectJogo(jogo)">
+
+      <p> NOME : {{jogo.name}}  </p>
+       <p> DESCRIÇÃO : {{jogo.descricao}} </p>
+       <p> PLATAFORMA : {{jogo.plataforma}} </p>
+       <p> Nº JOGADORES : {{jogo.jogadores}} </p>
+
+      <button class="btn btn-danger  float-right" (click)="remove(contador)">REMOVER</button>
+    </li>
+
+  </ul>
+  <hr>
+  <h4>Edit</h4>
+  <div class="input-group container" *ngIf="recebedorJogos">
+    <br>
+    <input  class="form-control col" type="text" placeholder="Nome" [(ngModel)]="recebedorJogos.name">
+    <input  class="form-control col input-group-text" type="text" placeholder="Descrição" [(ngModel)]="recebedorJogos.descricao">
+    <input  class="form-control col" type="text" placeholder="PLataforma" [(ngModel)]="recebedorJogos.plataforma">
+    <input  class="form-control col " type="number" placeholder="Jogadores" [(ngModel)]="recebedorJogos.jogadores">
+
+
+
+    <button class="btn btn-outline-success" (click)="salvar()">salvar</button>
+    <button class="btn btn-outline-danger" (click)="cancelar()">Cancelar</button>
+  </div>
+  <br>
+  <div class=" container col-3 btn-group">
+    <button class="btn btn-primary" (click)="novoJogo()">Novo Jogo</button>
+
+
+  </div>
+</div>

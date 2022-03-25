@@ -36,7 +36,16 @@ export class MovieComponent implements OnInit {
   save(){
     if(this.curMovie){
      this.movies.push(this.curMovie);
+     this.curMovie = undefined;
     }
+  }
+
+  cancelar(){
+    this.curMovie = undefined;
+  }
+
+  remove(pos: number){
+    this.movies.splice(pos, 1); // a função splice remove dentro de um array
   }
 
 }
