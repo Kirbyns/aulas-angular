@@ -1,0 +1,25 @@
+<div class="container">
+  <h3>Listagem de filmes</h3>
+
+
+
+  <ul class="list-group">
+    <li  class="list-group-item"*ngFor="let movie of movies" (click)="selectMovie(movie)">
+      {{movie.name}} - {{movie.rating}}
+    </li>
+
+  </ul>
+  <hr>
+  <h4>Edit</h4>
+  <div class="input-group container" *ngIf="curMovie">
+    <br>
+    <input  class="form-control col" type="text" placeholder="Name" [(ngModel)]="curMovie.name">
+    <input class="form-control col" type="number" placeholder ="Rating" [(ngModel)]="curMovie.rating">
+    <button class="btn btn-outline-success" (click)="save()">salvar</button>
+  </div>
+  <br>
+  <div class=" container col-1 btn-group">
+    <button class="btn btn-primary" (click)="newMovie()">New</button>
+
+  </div>
+</div>
