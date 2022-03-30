@@ -3,3 +3,38 @@
 <p>Crie uma calculadora que tenha duas caixas de texto e 4 botões de radio. O valor da operação
   resultante deve ser exibido em um texto simples, abaixo das caixas, assim que valores forem digitados
   nas caixas de texto, de acordo com o radio selecionado.</p>
+
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="soma" id="inlineRadio1" >
+    <label class="form-check-label" for="inlineRadio1" [value]="'soma()'" >SOMA</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="subtracao" id="inlineRadio2">
+    <label class="form-check-label" for="inlineRadio2">SUBTRAÇÃO</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="divisao" id="inlineRadio3">
+    <label class="form-check-label" for="inlineRadio3">DIVISÃO</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="multiplicacao" id="inlineRadio3">
+    <label class="form-check-label" for="inlineRadio3">MULTIPLICAÇÃO</label>
+  </div>
+
+  <div class="container input-group">
+    <form>
+      <div class="row">
+        <div class="col-6">
+          <input class="form-control"  placeholder="VALOR" [(ngModel)]="numero01" type="number">
+        </div>
+        <div class="col-6">
+          <input class="form-control" placeholder="VALOR"[(ngModel)]="numero02" type="number">
+        </div>
+    </div>
+    </form>
+
+
+  </div>
+
+  <P> o Resultado é : {{resultado}}</P>
+

@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Exercicio05Component implements OnInit {
 
+  numero01 = 0;
+  numero02 = 0;
+  resultado =0;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  soma(){
+    this.numero01+this.numero02===this.resultado
   }
 
 }
