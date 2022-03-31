@@ -1,0 +1,28 @@
+<hr>
+<h3>Exercicio - 07</h3>
+<p>Crie um select que permita selecionar dentre 5 possíveis países. Quando um país for selecionado, a
+  bandeira do mesmo deve ser exibida abaixo do select</p>
+
+
+  <select  [(ngModel)]="teste" class="form-select ">
+
+    <option selected>Selecione um pais</option>
+    <option value="1">Brasil</option>
+    <option value="2">china</option>
+    <option value="3">Italia</option>
+    <option value="4">Egito</option>
+    <option value="5">Argentina</option>
+
+  </select>
+  <br>
+  <div [ngSwitch]="teste">
+    <br>
+    <img *ngSwitchCase="'1'" src="/assets/brasil.png">
+    <img *ngSwitchCase="'2'" src="/assets/china.png">
+    <img *ngSwitchCase="'3'" src="/assets/italia.png">
+    <img *ngSwitchCase="'4'" src="/assets/egito.png">
+    <img *ngSwitchCase="'5'" src="/assets/argentina.png">
+    <p *ngSwitchCase="''"> sem imagem por enquanto</p>
+    <br>
+
+  </div>

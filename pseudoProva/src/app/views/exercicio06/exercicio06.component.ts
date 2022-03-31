@@ -8,17 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class Exercicio06Component implements OnInit {
 
   texto = '';
-  imagem ='';
+
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  trocar(){
-    this.texto == this.texto.toUpperCase();
 
-    if(this.texto =="THE LAST OF US"){
-        this.imagem == '/assets/imagem01.png'
-    }
-  }
+
 }

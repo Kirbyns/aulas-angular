@@ -9,6 +9,9 @@ import { Exercicio03Component } from './views/exercicio03/exercicio03.component'
 import { Exercicio04Component } from './views/exercicio04/exercicio04.component';
 import { Exercicio05Component } from './views/exercicio05/exercicio05.component';
 import { Exercicio06Component } from './views/exercicio06/exercicio06.component';
+import { Exercicio07Component } from './views/exercicio07/exercicio07.component';
+import { Exercicio08Component } from './views/exercicio08/exercicio08.component';
+import { Exercicio09Component } from './views/exercicio09/exercicio09.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { Exercicio06Component } from './views/exercicio06/exercicio06.component'
     Exercicio03Component,
     Exercicio04Component,
     Exercicio05Component,
-    Exercicio06Component
+    Exercicio06Component,
+    Exercicio07Component,
+    Exercicio08Component,
+    Exercicio09Component
   ],
   imports: [
     BrowserModule,

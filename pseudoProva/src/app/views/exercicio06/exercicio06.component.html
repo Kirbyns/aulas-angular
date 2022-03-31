@@ -15,4 +15,16 @@
 
 
   <br>
-    <img [src]="imagem">
+  <div [ngSwitch]="texto.toUpperCase()">
+    <br>
+    <img *ngSwitchCase="'THE LAST OF US'" src="/assets/thelastofus.png">
+    <img *ngSwitchCase="'GOD OF WAR'" src="/assets/godofwar.png">
+    <img *ngSwitchCase="'RED DEAD REDEMPTION'" src="/assets/reddead.png">
+    <img *ngSwitchCase="'BLOODBORNE'" src="/assets/bloodborne.png">
+    <p *ngSwitchCase="''"> sem imagem por enquanto</p>
+    <br>
+    <div *ngSwitchDefault><img src="/assets/imagemqualquer.png"></div>
+    <button class="btn btn-light" (click)="texto = ''">tirar imagem</button>
+
+
+  </div>

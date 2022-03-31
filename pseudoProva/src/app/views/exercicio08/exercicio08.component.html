@@ -1,0 +1,37 @@
+<hr>
+<h3>Exercicio - 08</h3>
+<p>Elabore um componente onde o usuário possa digitar um número de 1 a 7 numa caixa de texto e o
+  nome do dia da semana correspondente seja exibido abaixo da caixa. Caso um número fora do
+  intervalo seja digitado, exiba “número inválido”</p>
+
+
+  <div class="container">
+
+      <div class="input-group">
+        <div>
+          <input class="form-control" placeholder="numero de 1 a 7"[(ngModel)]="switch" type="number" name="numero02">
+        </div>
+    </div>
+
+
+
+  <br>
+  <div [ngSwitch]="switch">
+    <br>
+    <p *ngSwitchCase="'1'" >Segunda-feira</p>
+    <p *ngSwitchCase="'2'" >Terça-feira  </p>
+    <p *ngSwitchCase="'3'" >Quarta-feira </p>
+    <p *ngSwitchCase="'4'" >Quinta-feira </p>
+    <p *ngSwitchCase="'5'" >Sexta-feira  </p>
+    <p *ngSwitchCase="'6'" >Sabado       </p>
+    <p *ngSwitchCase="'7'" >Domingo      </p>
+    <p *ngSwitchCase="''" ></p>
+
+    <p *ngSwitchDefault> Numéro Invalido</p>
+    <br>
+
+  </div>
+</div>
+
+
+
