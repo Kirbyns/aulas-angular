@@ -1,0 +1,18 @@
+<hr>
+<h3>Exercicio - 06</h3>
+<p>Crie uma caixa de texto que permita digitar o nome de um jogo. Quando o nome do jogo bater com o
+  de 4 possíveis jogos pré-definidos, exiba a imagem do jogo logo abaixo da caixa de texto. Se um nome
+  inválido (que não seja um dos 4 possíveis jogos) for digitado, exibir uma imagem qualquer.</p>
+
+  <ul class="list-group list-group-flush"> <h5>Jogos possiveis</h5>
+    <li class="list-group-item"> the last of us</li>
+    <li class="list-group-item"> God of War</li>
+    <li class="list-group-item"> Red Dead Redemption</li>
+    <li class="list-group-item"> Bloodborne</li>
+  </ul>
+  <h5>Digite o nome do jogo para buscar</h5>
+  <input class="form-control"  placeholder="Digite o nome de um jogo" [(ngModel)]="texto" type="text">
+
+
+  <br>
+    <img [src]="imagem">
