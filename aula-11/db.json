@@ -1,0 +1,74 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 3,
+      "title": "quase sextou!",
+      "author": "Fabio"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "movies": [
+    {
+      "id": 1,
+      "title": "Alien",
+      "director": "Ridley Scott"
+    }
+  ],
+  "jogos": [
+    {
+      "id": 1,
+      "title": "God Of War",
+      "plataforma": "sony",
+      "multiplayer": "não"
+    },
+    {
+      "id": 2,
+      "title": "The Last Of Us",
+      "plataforma": "Sony",
+      "multiplayer": "não"
+    },
+    {
+      "id": 3,
+      "title": "League of legends",
+      "plataforma": "PC",
+      "multiplayer": "sim"
+    },
+    {
+      "id": 4,
+      "title": "Resident Evil 2 remake",
+      "plataforma": "todas plataformas",
+      "multiplayer": "não"
+    }
+  ],
+  "cliente": [
+    {
+      "id": 1,
+      "nome": "Matheus Oliveira",
+      "cpf": "32955877118"
+    },
+    {
+      "id": 2,
+      "nome": "",
+      "cpf": ""
+    },
+    {
+      "id": 3,
+      "nome": "kdasidkai",
+      "cpf": "isdhaus"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
