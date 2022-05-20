@@ -3,17 +3,18 @@
 <h4>Listagem de Clientes</h4>
 <ul>
   <li *ngFor="let cliente of clientes">
-   {{cliente.id}} - {{cliente.nome}} - {{cliente.cpf}}
+   {{cliente.id}} - {{cliente.nome}} - {{cliente.cpf}} <span  (click)="excluir(cliente.id)">DELETE </span>  <span  (click)="editar(cliente)"> EDIT</span>
+
 
   </li>
 </ul>
 
-<button  class="btn-lg btn-warning"(click)="novo()"> Novo</button>
+<button  (click)="novo()"> Novo</button>
 <div *ngIf="cliente">
   <input placeholder="Nome" [(ngModel)]="cliente.nome">
   <br>
   <input placeholder="CPF" [(ngModel)]="cliente.cpf">
   <br>
-  <button class = "btn-lg btn-success mx-5"(click) ="salvar()">Salvar</button>
+  <button (click) ="salvar()">Salvar</button>
 
 </div>

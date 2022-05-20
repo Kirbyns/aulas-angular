@@ -5,34 +5,51 @@ import { ClienteService } from 'src/app/service/cliente.service';
 @Component({
   selector: 'app-cliente',
   templateUrl: './cliente.component.html',
-  styleUrls: ['./cliente.component.css']
+  styleUrls: ['./cliente.component.css'],
 })
 export class ClienteComponent implements OnInit {
-    clientes = new Array<Cliente>()
-    cliente?:Cliente;
-    //clientes: Cliente[] = []  >>> outro jeito de declarar
-  constructor(private clienteService: ClienteService) { }
+  clientes = new Array<Cliente>();
+  cliente?: Cliente;
+  //clientes: Cliente[] = []  >>> outro jeito de declarar
+  editando = false;
+  constructor(private clienteService: ClienteService) {}
 
   ngOnInit(): void {
     this.listar();
   }
 
-
-  listar(){
-    this.clienteService.listar().subscribe(clientes =>{
-      this.clientes =  clientes;
+  listar() {
+    this.clienteService.listar().subscribe((clientes) => {
+      this.clientes = clientes;
     });
   }
-  novo(){
+  novo() {
     this.cliente = new Cliente();
+    this.editando = false;
   }
-  salvar(){
-    if(this.cliente){
-    this.clienteService.inserir(this.cliente).subscribe(Cliente => {
-      this.listar();
-      this.cliente = undefined;
-    });
+  salvar() {
+    if (this.cliente) {
+      if (!this.editando) {
+        this.clienteService.inserir(this.cliente).subscribe((Cliente) => {
+          this.listar();
+          this.cliente = undefined;
+        });
+      } else {
+        this.clienteService.atualizar(this.cliente).subscribe((cliente) => {
+          this.listar();
+          this.cliente = undefined;
+        });
+      }
     }
   }
+  excluir(id: number) {
+    this.clienteService.remover(id).subscribe(() => {
+      this.listar();
+    }); //FUNção seta sem parametros
+  }
 
+  editar(cliente: Cliente) {
+    this.cliente = cliente;
+    this.editando = true;
+  }
 }
